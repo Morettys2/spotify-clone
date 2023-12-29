@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play} from 'lucide-react'
+import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Shuffle, SkipBack, SkipForward, Repeat, Mic, LayoutList, Laptop2, Volume, Maximize2, } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -92,38 +92,85 @@ export default function Home() {
               </button>
             </a>
           </div>
-          <h2 className='text-semibold text-3xl mt-10'>Made for João Pedro Moretti</h2>
+          <h2 className='text-semibold text-2xl mt-10'>Made for João Pedro Moretti</h2>
           <div className='grid grid-cols-8 gap-4 mt-4'></div>
-          
-          <div className='bg-white/5 p-3 rounded flex flex-row'>
-          <a href='' className='bg-white/5 p-3 rounded flex flex-row'>
-  <Image src="/album.jpg" className='w-60 p-3' width={120} height={120} alt="Capa do album post malone" />
-</a>
 
-<a href='' className='bg-white/5 p-3 rounded flex flex-row'>
-  <Image src="/album.jpg" className='w-60 p-3' width={120} height={120} alt="Capa do album post malone" />
-</a>
+          <div className='bg-white/5 p-3 rounded flex hover:bg-yellow-50/10 flex-row justify-between'>
 
-<a href='' className='bg-white/5 p-3 rounded flex flex-row'>
-  <Image src="/album.jpg" className='w-60 p-3' width={120} height={120} alt="Capa do album post malone" />
-</a>
+            <a href='' className='bg-white/5 p-3 rounded flex flex-col gap-2'>
+              <Image src="/album.jpg" className='w-full p-3' width={120} height={120} alt="Capa do album post malone" />
+              <strong className='font-semibold'>Daily Mix 1</strong>
+              <span className='text-sm text-zinc-400'>Post Malone</span>
+            </a>
 
-<a href='' className='bg-white/5 p-3 rounded flex flex-row'>
-  <Image src="/album.jpg" className='w-60 p-3' width={120} height={120} alt="Capa do album post malone" />
-</a>
+            <a href='' className='bg-white/5 p-3 rounded flex flex-col gap-2'>
+              <Image src="/album.jpg" className='w-full p-3' width={120} height={120} alt="Capa do album post malone" />
+              <strong className='font-semibold'>Daily Mix 2</strong>
+              <span className='text-sm text-zinc-400'>Post Malone</span>
+            </a>
 
-<a href='' className='bg-white/5 p-3 rounded flex flex-row'>
-  <Image src="/album.jpg" className='w-60 p-3' width={120} height={120} alt="Capa do album post malone" />
-</a>
+            <a href='' className='bg-white/5 p-3 rounded flex flex-col gap-2'>
+              <Image src="/album.jpg" className='w-full p-3' width={120} height={120} alt="Capa do album post malone" />
+              <strong className='font-semibold'>Daily Mix 3</strong>
+              <span className='text-sm text-zinc-400'>Post Malone</span>
+            </a>
+
+            <a href='' className='bg-white/5 p-3 rounded flex flex-col gap-2'>
+              <Image src="/album.jpg" className='w-full p-3' width={120} height={120} alt="Capa do album post malone" />
+              <strong className='font-semibold'>Daily Mix 4</strong>
+              <span className='text-sm text-zinc-400'>Post Malone</span>
+            </a>
+
+            <a href='' className='bg-white/5 p-3 rounded flex flex-col gap-2'>
+              <Image src="/album.jpg" className='w-full p-3' width={120} height={120} alt="Capa do album post malone" />
+              <strong className='font-semibold'>Daily Mix 5</strong>
+              <span className='text-sm text-zinc-400'>Post Malone</span>
+            </a>
 
           </div>
         </main>
       </div>
-      <div>
-        <footer className='bg-zinc-800 border-zic-700 p-6'>
-          footer
-        </footer>
-      </div>
+      <footer className='bg-zinc-800 border-zic-700 p-6 flex items-center justify-between'>
+        <div className='flex items-center gap-3'>
+          <Image src="/album.jpg" width={56} height={56} alt="Capa do album post malone" />
+          <div className='flex flex-col'>
+            <strong className='font-normal'>Chimal</strong>
+            <span className='text-xs text-zinc-400'>Post Malone</span>
+          </div>
+        </div>
+        <div className='flex flex-col items-center gap-2'>
+          <div className='flex items-center gap-6'>
+            <Shuffle size={20} className='text-zinc-200' />
+            <SkipBack size={20} className='text-zinc-200' />
+
+            <button className='w-10 h-10 flex items-center justify-center pl-1 rounded-full bg-white/20 text-black'>
+              <Play size={20} className='text-zinc-200' />
+            </button>
+
+            <SkipForward size={20} className='text-zinc-200' />
+            <Repeat size={20} className='text-zinc-200' />
+          </div>
+
+          <div className='flex items-center gap-2 '>
+          </div>
+          <div className='h-1 rounded-full w-96 bg-zinc-600'>
+            <div className='bg-zinc-200 w-40 h-1 rounded-full'>
+            </div>
+            <span className='text-xs text-zinc-400'>0:31</span>
+          </div>
+        </div>
+
+        <div className='flex items-center gap-4'>
+          <Mic size={20} />
+          <LayoutList size={20} />
+          <Laptop2 size={20} />
+          <div className='flex items-center gap-2'>
+            <Volume size={20} />
+          </div>
+          <Maximize2 size={20} />
+          
+        </div>
+      </footer>
     </div>
   )
 }
